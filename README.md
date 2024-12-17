@@ -41,13 +41,13 @@ To set up the environment and run this project, install the following dependenci
 
 1. Python Libraries
 Install the required libraries using pip:
-'''
+```
 pip install pandas numpy scikit-learn matplotlib xgboost lightgbm pygrib joblib
-'''
-    - Note: pygrib requires additional setup. Install eccodes beforehand:
-    - Mac: brew install eccodes
-    - Linux: Use apt or a package manager for your distribution.
-2. Tools
+```
+- Note: pygrib requires additional setup. Install eccodes beforehand:
+- Mac: brew install eccodes
+- Linux: Use apt or a package manager for your distribution.
+3. Tools
 Python 3.8+
 Anaconda (Optional) for environment management.
 
@@ -62,21 +62,22 @@ Financial Data: Historical WTI oil price data, including volume and percentage c
 ## **Step-by-Step Instructions**
 1. Data Preprocessing
 Combine and clean weather and financial data.
-'''
+```
 cd scripts/preprocessing
 python process_data.py
-'''
-    Output: outputs/processed_weather_financial_data.csv
+```
+Output: outputs/processed_weather_financial_data.csv
 2. Dataset Testing
 Verify the processed data integrity and model readiness.
-'''
+```
 python test_data.py
-'''
-    Checks for:
+
+```
+ Checks for:
     Missing values
     Summary statistics
     Lagged/forecasted features validation
-3. Data Visualization
+4. Data Visualization
 Generate visualizations to explore key trends.
 '''
 python visualize_data.py
@@ -90,19 +91,20 @@ Outputs:
 Train different models to predict WTI prices.
 
 XGBoost
-'''
+```
 cd ../models
 python train_xgboost.py
-'''
+```
 LightGBM
-'''
+```
 python train_lightgbm.py
-'''
-Linear Regression
-'''
-python train_linear_regression.py
-'''
 
+```
+Linear Regression
+```
+python train_linear_regression.py
+
+```
     Outputs:
        - Predictions CSV files
        - Saved model files in outputs/model_outputs
