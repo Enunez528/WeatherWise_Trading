@@ -46,18 +46,19 @@ Install the required libraries using pip:
 ```
 pip install pandas numpy scikit-learn matplotlib xgboost lightgbm pygrib joblib
 ```
-- Note: pygrib requires additional setup. Install eccodes beforehand:
+Note: pygrib requires additional setup. Install eccodes beforehand:
 - Mac: brew install eccodes
 - Linux: Use apt or a package manager for your distribution.
-3. Tools
-Python 3.8+
-Anaconda (Optional) for environment management.
+
+2. Tools
+- Python 3.8+
+- Anaconda (Optional) for environment management.
 
 ---
 
 ## **Data Sources**
-Weather Data: GRIB files containing weather forecasts (temperature, wind, pressure, humidity).
-Financial Data: Historical WTI oil price data, including volume and percentage change.
+- Weather Data: GRIB files containing weather forecasts (temperature, wind, pressure, humidity).
+- Financial Data: Historical WTI oil price data, including volume and percentage change.
 
 ---
 
@@ -69,6 +70,7 @@ cd scripts/preprocessing
 python process_data.py
 ```
 Output: outputs/processed_weather_financial_data.csv
+
 2. Dataset Testing
 Verify the processed data integrity and model readiness.
 ```
@@ -78,7 +80,8 @@ python test_data.py
     Missing values
     Summary statistics
     Lagged/forecasted features validation
-4. Data Visualization
+
+3. Data Visualization
 Generate visualizations to explore key trends.
 ```
 python visualize_data.py
@@ -88,6 +91,7 @@ Outputs:
 - WTI closing price trends
 - Surface temperature trends
 - Correlation heatmap
+
 4. Train Machine Learning Models
 Train different models to predict WTI prices.
 
