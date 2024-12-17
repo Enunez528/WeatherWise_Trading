@@ -7,6 +7,8 @@ This project integrates weather data and financial data to predict short-term WT
 
 ## **Project Structure**
 The project is organized as follows:
+
+```plaintext
 project_folder/
 │
 ├── data/                       # Input raw data files
@@ -33,7 +35,7 @@ project_folder/
 │       └── train_linear_regression.py  # Linear Regression training
 │
 └── README.md                   # Project documentation
-
+```
 ---
 
 ## **Requirements**
@@ -71,7 +73,6 @@ Output: outputs/processed_weather_financial_data.csv
 Verify the processed data integrity and model readiness.
 ```
 python test_data.py
-
 ```
  Checks for:
     Missing values
@@ -79,9 +80,9 @@ python test_data.py
     Lagged/forecasted features validation
 4. Data Visualization
 Generate visualizations to explore key trends.
-'''
+```
 python visualize_data.py
-'''
+```
 
 Outputs:
 - WTI closing price trends
@@ -98,16 +99,14 @@ python train_xgboost.py
 LightGBM
 ```
 python train_lightgbm.py
-
 ```
 Linear Regression
 ```
 python train_linear_regression.py
-
 ```
-    Outputs:
-       - Predictions CSV files
-       - Saved model files in outputs/model_outputs
+Outputs:
+- Predictions CSV files
+- Saved model files in outputs/model_outputs
 
 ---
 
